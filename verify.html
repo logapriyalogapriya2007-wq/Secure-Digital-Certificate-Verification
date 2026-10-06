@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Certificate</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🔐 CertChain</div>
+    <div>
+        <a href="/">Home</a>
+        <a href="/issue">Issue</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Verify Certificate</h2>
+
+        <form method="POST">
+
+            <label>Certificate ID</label>
+
+            <input type="text"
+                   name="certificate_id"
+                   placeholder="Example: CERT-1234ABCD"
+                   required>
+
+            <button type="submit">
+                Verify Certificate
+            </button>
+
+        </form>
+
+        {% if result %}
+
+            <div class="result">
+
+                {% if result == "VALID" %}
+
+                    <h2 class="success">
+                        ✓ Certificate Verified
+                    </h2>
+
+                    <p>
+                        This certificate is valid and
+                        blockchain verification was successful.
+                    </p>
+
+                {% else %}
+
+                    <h2 class="danger">
+                        ✗ Invalid Certificate
+                    </h2>
+
+                    <p>
+                        Certificate could not be verified.
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+<div class="footer">
+    Secure Academic Certificate Verification
+</div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificate Generated</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🔐 CertChain</div>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/issue">Issue</a>
+        <a href="/verify">Verify</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2 class="success">
+            ✓ Certificate Secured Successfully
+        </h2>
+
+        <div class="result">
+
+            <p>
+                <strong>Certificate ID:</strong>
+                {{ certificate.certificate_id }}
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Student Name:</strong>
+                {{ certificate.student_name }}
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Course:</strong>
+                {{ certificate.course }}
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Issue Date:</strong>
+                {{ certificate.issue_date }}
+            </p>
+
+            <br>
+
+            <p>
+                <strong>SHA-256 Hash:</strong><br>
+                {{ certificate.certificate_hash }}
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Blockchain Hash:</strong><br>
+                {{ blockchain_hash }}
+            </p>
+
+        </div>
+
+        <br>
+
+        <a href="/verify" class="btn">
+            <button>Verify Certificate</button>
+        </a>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    Certificate protected using Hashing + Blockchain
+</div>
+
+</body>
+</html>

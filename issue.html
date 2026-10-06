@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Issue Certificate</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🔐 CertChain</div>
+    <div>
+        <a href="/">Home</a>
+        <a href="/verify">Verify</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Issue Academic Certificate</h2>
+
+        <form method="POST">
+
+            <label>Student Name</label>
+            <input type="text" name="name"
+                   placeholder="Enter student name" required>
+
+            <label>Course</label>
+            <input type="text" name="course"
+                   placeholder="Enter course name" required>
+
+            <button type="submit">
+                Generate Secure Certificate
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    Blockchain Secured Certificate System
+</div>
+
+</body>
+</html>
